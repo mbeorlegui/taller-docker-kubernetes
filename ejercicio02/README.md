@@ -33,3 +33,5 @@ Para descargar desde otro lugar:
 ```bash
 docker pull matibeor/pingapp:0.0.1
 ```
+
+La imágen quedó publicada [aquí](https://hub.docker.com/u/matibeor).
