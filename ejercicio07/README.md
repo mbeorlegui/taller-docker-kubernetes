@@ -25,3 +25,12 @@ Escribe tus respuestas ejercicio07/README.md en tu repositorio github y entrega 
   - Continua describiendo los servicios (contenedores que se generan luego de hacer un `up`), en este caso uno para la web, y otro para la base de datos.
   - Para la base de datos, indica que el contenedor está basado en la imágen de postgres, y que tiene como variable de entorno un `POSTGRES_PASSWORD`, el cual es definido.
   - Para la web, indica que el contenedor está basado en la imágen `nicopaez/jobvacancy-ruby:1.3.0`, que ocupa el puerto 3000, que está linkeado al contenedor `db`, y que depende del mismo. Además, tiene definidas otras variables de entorno, como el puerto (mismo que antes mencionado), un env, y una URL desde la que se accede a la base de datos.
+
+- El docker-compose crea una red dentro de mi computadora, y de esa manera se comunican entre ellos estos contenedores. Se puede ver esto, haciendo lo siguiente:
+```bash
+$ docker network ls
+NETWORK ID     NAME                  DRIVER    SCOPE
+34ef0c4a6f00   ejercicio07_default   bridge    local
+```
+
+Se puede ver mas información al respecto consultando al comando `docker network inspect ejercicio07_default`
