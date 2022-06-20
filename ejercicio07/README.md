@@ -17,3 +17,11 @@ Finalmente contesta:
 Escribe tus respuestas ejercicio07/README.md en tu repositorio github y entrega el link directo al archivo.
 
 ## Solución
+
+- Con `docker ps` vemos que se iniciaron un contenedor basado en la imagen de `postgres`, y otro basado en la imagen de `nicopaez/jobvacancy-ruby:1.3.0`, lo cual coincide con el `yml` que nombra a las mismas dos imagenes como servicios, uno para `web` y otro para `db`
+
+- Desglose del docker-compose:
+  - Empieza indicando que la versión de docker-compose a utilizar es la 2.
+  - Continua describiendo los servicios (contenedores que se generan luego de hacer un `up`), en este caso uno para la web, y otro para la base de datos.
+  - Para la base de datos, indica que el contenedor está basado en la imágen de postgres, y que tiene como variable de entorno un `POSTGRES_PASSWORD`, el cual es definido.
+  - Para la web, indica que el contenedor está basado en la imágen `nicopaez/jobvacancy-ruby:1.3.0`, que ocupa el puerto 3000, que está linkeado al contenedor `db`, y que depende del mismo. Además, tiene definidas otras variables de entorno, como el puerto (mismo que antes mencionado), un env, y una URL desde la que se accede a la base de datos.
