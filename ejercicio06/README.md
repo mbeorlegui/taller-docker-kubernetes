@@ -34,3 +34,6 @@ docker push matibeor/passwordapi2:0.0.1
 ```
 
 Finalmente, la imágen quedó publicada [aquí](https://hub.docker.com/r/matibeor/passwordapi2)
+
+**Corrección**: Como en la documentación dice que la imagen base ya corre en un puerto, con un usuario, con un workdir determinado, y con un cmd, no es necesario poner toda esta informacion en el Dockerfile. 
+Esto remarca la importancia de tener una imagen base bien pulida, para que el Dockerfile sea lo mas chico posible, y tenga la menor cantidad de capas posibles.
