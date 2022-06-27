@@ -1,9 +1,18 @@
 # Ejercicio 8
 
-Utilizando docker compose generar una configuración para correr dos instancias de passwordapi (`nicopaez/password-api`) balanceadas por Nginx.
-La aplicación tiene un endpoint `/health` que indica la ip/host de la instancia que atendió el pedido, se puede usar esto para verificar el correcto balanceo.
+Utilizando docker compose generar una configuraciï¿½n para correr dos instancias de passwordapi (`nicopaez/password-api`) balanceadas por Nginx.
+La aplicaciï¿½n tiene un endpoint `/health` que indica la ip/host de la instancia que atendiï¿½ el pedido, se puede usar esto para verificar el correcto balanceo.
 
-Poner la solución en un carpeta ejercicio08, incluyendo:
-- La configuración de compose
-- El README.md con la forma correrlo y cualquier explicación que consideres relevante.
+Poner la soluciï¿½n en un carpeta ejercicio08, incluyendo:
+- La configuraciï¿½n de compose
+- El README.md con la forma correrlo y cualquier explicaciï¿½n que consideres relevante.
+
+## SoluciÃ³n
+
+1. Levanto el servicio de Docker:
+```
+docker-compose up -d
+```
+2. Ingresar a http://localhost:8083/
+3. Ingresar a http://localhost:8083/health
 
